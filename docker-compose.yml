@@ -1,0 +1,76 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: gptx_postgres
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER} 
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "9432:9432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    labels:
+      project: gptx-dba-practice
+      role: database
+      engine: postgres
+
+  mysql:
+    image: mysql:8
+    container_name: gptx_mysql
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "9306:9306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    labels:
+      project: gptx-dba-practice
+      role: database
+      engine: mysql
+
+  redis:
+    image: redis:7
+    container_name: gptx_redis
+    ports:
+      - "9379:9379"
+    labels:
+      project: gptx-dba-practice
+      role: cache
+      engine: redis
+
+  mongo:
+    image: mongo:6
+    container_name: gptx_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/data/db
+    labels:
+      project: gptx-dba-practice
+      role: database
+      engine: mongo
+
+  adminer:
+    image: adminer
+    container_name: gptx_adminer
+    ports:
+      - "9080:9080"
+    labels:
+      project: gptx-dba-practice
+      role: gui
+      engine: multi
+
+volumes:
+  pgdata:
+    name: gptx_pgdata
+  mysqldata:
+    name: gptx_mysqldata
+  mongodata:
+    name: gptx_mongodata
+
