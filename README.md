@@ -94,7 +94,16 @@ All governance, optimization, and role strategies are documented in the docs/ fo
 
 ### 🧪 Practice Tasks
 
-- Pending
+- sql/postgres/  [Tasks](./sql/postgres/tasks.md)
+- sql/mysql/     [Tasks](./sql/mysql/tasks.md)
+- nosql/redis/   [Tasks](./nosql/redis/tasks.md)
+- nosql/mongo/   [Tasks](./nosql/mongo/tasks.md)
+- scripts/       [Tasks](./scripts/tasks.md)
+- docs/          [Tasks](./docs/tasks.md)
+
+### Cases traces (solutions/activities) 
+
+[`track-progress.md`](./docs/track-progress.md)
 
 ### 🧑‍💻 Contributor Notes
 This workspace is designed for hands-on DBA skill development and interview preparation. Each module is self-contained and documented for clarity. Feel free to fork, extend, or adapt to your own infrastructure.
