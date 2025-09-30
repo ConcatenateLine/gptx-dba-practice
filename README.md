@@ -101,7 +101,7 @@ All governance, optimization, and role strategies are documented in the docs/ fo
 - scripts/       [Tasks](./scripts/tasks.md)
 - docs/          [Tasks](./docs/tasks.md)
 
-### Cases traces (solutions/activities) 
+### Tracer (solutions/activities) 
 
 [`track-progress.md`](./docs/track-progress.md)
 

@@ -23,6 +23,7 @@ services:
     env_file:
       - .env
     environment:
+      MYSQL_USER: ${MYSQL_USER}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
     ports:
@@ -60,7 +61,7 @@ services:
     image: adminer
     container_name: gptx_adminer
     ports:
-      - "9080:9080"
+      - "9080:8080"
     labels:
       project: gptx-dba-practice
       role: gui

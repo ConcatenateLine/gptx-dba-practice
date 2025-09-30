@@ -2,7 +2,7 @@ Go to [`README.md`](../README.md) for more information.
 
 # 📁 Case Study Index
 
-Each case corresponds to a documented solution for a task defined in `task.md`.
+Each case corresponds to a documented solution for a task defined in `[module]/tasks.md`.
 ---
 
 ## 🐘 PostgreSQL
