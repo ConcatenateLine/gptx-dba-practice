@@ -105,6 +105,16 @@ All governance, optimization, and role strategies are documented in the docs/ fo
 
 [`track-progress.md`](./docs/track-progress.md)
 
+### Connection
+This script will open a connection to the database and allow you to interact with it.
+
+Run connection script:
+```bash
+./utils/connect.sh <module> # <module> can be postgres, mysql, redis, mongo
+```
+
+[`connect.sh`](./utils/connect.sh)
+
 ### 🧑‍💻 Contributor Notes
 This workspace is designed for hands-on DBA skill development and interview preparation. Each module is self-contained and documented for clarity. Feel free to fork, extend, or adapt to your own infrastructure.
 
