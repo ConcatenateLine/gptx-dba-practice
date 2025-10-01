@@ -103,7 +103,7 @@ All governance, optimization, and role strategies are documented in the docs/ fo
 
 ### Tracer (solutions/activities) 
 
-[`track-progress.md`](./docs/track-progress.md)
+[`track-progress.md`](./README.md)
 
 ### Connection
 This script will open a connection to the database and allow you to interact with it.
