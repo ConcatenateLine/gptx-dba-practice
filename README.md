@@ -1,120 +1,76 @@
-# 📦 GPTX DBA Practice Workspace
+Go to [`README.md`](../README.md) for more information.
 
-A modular test environment for practicing database administration task. Includes SQL and NoSQL engines, automation scripts, monitoring tools, and governance documentation.
+# 📁 Case Study Index
 
+Each case corresponds to a documented solution for a task defined in `[module]/tasks.md`.
+---
+
+## 🐘 PostgreSQL
+
+| Task | Link to Task | Tags | Link to Case (activity) |
+|------|--------------|------|------|
+| Create a Role with Limited Access | [task 1](../sql/postgres/tasks.md#1-create-a-role-with-limited-access) | access-control | ❌ pending |
+| Optimize a Query | [task 2](../sql/postgres/tasks.md#2-optimize-a-query) | performance, indexing | ✅ [query-optimization.md](../sql/postgres/cases/query-optimization.md) example |
+| Simulate Backup and Restore | [task 3](../sql/postgres/tasks.md#3-simulate-backup-and-restore) | recovery, integrity | ❌ pending |
+| Monitor Connections | [task 4](../sql/postgres/tasks.md#4-monitor-connections) | observability | ❌ pending |
 
 ---
 
-## 🧰 Technologies
+## 🐬 MySQL
 
-- PostgreSQL 15
-- MySQL 8
-- Redis 7
-- MongoDB 6
-- Adminer (GUI)
-- Docker Compose
-- Bash & Python scripting
-
-### Modules
-
-- SQL
-    - PostgreSQL & MySQL schemas, indexingm user roles
-    - Backup & restore scripts
-    - Query optimization with EXPLAIN ANALYZE
-
-- NoSQL
-    - Redis cache strategies and TTL
-    - MongoDB document modeling, indexing, replication sets
- 
-- Automation
-    - backup.sh: daily dumps with timestamp
-    - restore.sh: restore from named backup
-    - monitor.py: active connection count (PostgreSQL)
-
-- Monitoring
-    - Enable slow query logs
-    - For configure: Prometheus + Grafana integration
-
-
-### Folder Structure
-
-```bash
-.
-├── docker-compose.yml
-├── sql/
-│   ├── postgres/
-│   └── mysql/
-├── nosql/
-│   ├── redis/
-│   └── mongo/
-├── scripts/ 
-├── docs/ 
-└── backup/
-```
+| Task | Link to Task | Tags | Link to Case (activity) |
+|------|--------------|------|------|
+| Create a Developer Role | [task 1](../sql/mysql/tasks.md#1-create-a-developer-role) | access-control | ❌ pending |
+| Profile a Query | [task 2](../sql/mysql/tasks.md#2-profile-a-query) | performance | ❌ pending |
+| Enable Slow Query Log | [task 3](../sql/mysql/tasks.md#3-enable-slow-query-log) | observability | ❌ pending |
+| Test Backup/Restore | [task 4](../sql/mysql/tasks.md#4-test-backuprestore) | recovery | ❌ pending |
 
 ---
 
-## 🚀 Setup Instructions
+## 🔴 Redis
 
-### 1. Clone and initialize
-```bash
-git clone https://github.com/ConcatenateLine/gptx-dba-practice.git
-cd gptx-dba-practice
-docker compose up -d
+| Task | Link to Task | Tags | Link to Case (activity) |
+|------|--------------|------|------|
+| Simulate Login Cache | [task 1](../nosql/redis/tasks.md#1-simulate-login-cache) | caching, expiration | ✅ [session-cache.md](../nosql/redis/cases/session-cache.md) example |
+| Use Hashes for Product Info | [task 2](../nosql/redis/tasks.md#2-use-hashes-for-product-info) | data-modeling | ❌ pending |
+| Monitor Keyspace | [task 3](../nosql/redis/tasks.md#3-monitor-keyspace) | observability | ❌ pending |
+| Automate Cleanup | [task 4](../nosql/redis/tasks.md#4-automate-cleanup) | scripting | ❌ pending |
 
-# Check status
-docker compose ps
-```
+---
 
-### 2. Seed databases
+## 🍃 MongoDB
 
-```bash
-# PostgreSQL
-docker exec -i <postgres_container_id> psql -U admin -d gptxdb < sql/postgres/init.sql
+| Task | Link to Task | Tags |  Link to Case (activity) |
+|------|--------------|------|------|
+| Create a Replica Set | [task 1](../nosql/mongo/tasks.md#1-create-a-replica-set-local) | availability | ❌ pending |
+| Model Nested Documents | [task 2](../nosql/mongo/tasks.md#2-model-nested-documents) | schema-design | ❌ pending |
+| Profile a Query | [task 3](../nosql/mongo/tasks.md#3-profile-a-query) | performance | ❌ pending |
+| Simulate Sharding | [task 4](../nosql/mongo/tasks.md#4-simulate-sharding-optional) | scalability | ❌ pending |
 
-# MySQL
-docker exec -i <mysql_container_id> mysql -u root -prootpass gptxdb < sql/mysql/init.sql
+---
 
-# Redis
-docker exec -i <redis_container_id> bash -c "$(cat nosql/redis/init.sh)"
+## ⚙️ Scripts
 
-# MongoDB
-docker exec -i <mongo_container_id> mongosh < nosql/mongo/init.js
+| Task | Link to Task | Tags | Link to Case (activity) |
+|------|--------------|------|------|
+| Validate Backup Script | [task 1](../scripts/tasks.md#1-validate-backup-script) | automation, integrity | ❌ pending |
+| Simulate Restore Workflow | [task 2](../scripts/tasks.md#2-simulate-restore-workflow) | recovery | ❌ pending |
+| Monitor PostgreSQL Connections | [task 3](../scripts/tasks.md#3-monitor-postgresql-connections) | observability | ❌ pending |
+| Add Logging to Scripts | [task 4](../scripts/tasks.md#4-add-logging-to-scripts) | scripting | ❌ pending |
+| Simulate Cron-Based Automation | [task 5](../scripts/tasks.md#5-simulate-cron-based-automation) | automation | ❌ pending |
+| Add Error Handling | [task 6](../scripts/tasks.md#6-add-error-handling) | scripting | ❌ pending |
+| Optional: Add Email Notification (Local) | [task 7](../scripts/tasks.md#7-add-email-notification-local) | automation | ❌ pending |
 
-```
+---
 
-### 📚 Documentation
+## 📚 Docs
 
-All governance, optimization, and role strategies are documented in the docs/ folder:
-
-- roles.md: Role-based access control
-- backup-policy.md: Backup frequency and restore procedures
-- optimization.md: Query tuning tips
-- governance.md: Integrity, security, and compliance guidelines
-
-### 🧪 Practice Tasks
-
-- sql/postgres/  [Tasks](./sql/postgres/tasks.md)
-- sql/mysql/     [Tasks](./sql/mysql/tasks.md)
-- nosql/redis/   [Tasks](./nosql/redis/tasks.md)
-- nosql/mongo/   [Tasks](./nosql/mongo/tasks.md)
-- scripts/       [Tasks](./scripts/tasks.md)
-- docs/          [Tasks](./docs/tasks.md)
-
-### Tracer (solutions/activities) 
-
-[`track-progress.md`](./docs/track-progress.md)
-
-### Connection
-This script will open a connection to the database and allow you to interact with it.
-
-Run connection script:
-```bash
-./utils/connect.sh <module> # <module> can be postgres, mysql, redis, mongo
-```
-
-[`connect.sh`](./utils/connect.sh)
-
-### 🧑‍💻 Contributor Notes
-This workspace is designed for hands-on DBA skill development and interview preparation. Each module is self-contained and documented for clarity. Feel free to fork, extend, or adapt to your own infrastructure.
+| Task | Link to Task | Tags | Link to Case (activity) |
+|------|--------------|------|------|
+| Define Role-Based Access Control | [task 1](../docs/tasks.md#1-define-role-based-access-control) | governance, access-control | ❌ pending |
+| Write Backup Policy | [task 2](../docs/tasks.md#2-write-backup-policy) | process, recovery | ❌ pending |
+| Document Optimization Strategies | [task 3](../docs/tasks.md#3-document-optimization-strategies) | documentation | ❌ pending |
+| Create Contributor Onboarding Guide | [task 4](../docs/tasks.md#4-create-contributor-onboarding-guide) | onboarding | ❌ pending |
+| Simulate Governance Scenario | [task 5](../docs/tasks.md#5-simulate-governance-scenario) | escalation, incident-response | ❌ pending |
+| Optional: Add Markdown Templates | [task 6](../docs/tasks.md#6-add-markdown-templates) | documentation | ❌ pending |
 
