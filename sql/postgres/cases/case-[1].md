@@ -3,13 +3,13 @@ Go to [`Track progress`](./track-progress.md).
 # 📚 CASE: Create a Role with Limited Access
 
 ```
-    Module: sql/postgres    Date: 2025-10-01    Status: Done
+    Module: sql/postgres    Date: 2025-10-01    Status: Completed
 ```
 
 ||||||
 | ---|--- | --- | --- | --- |
-| Related Task: | [`postgres > Create a Role with Limited Access`] |
-| Commit: | [`docs(postgres): add role creation case report`] |
+| Related Task: | `postgres > Create a Role with Limited Access` |
+| Commit: | `docs(postgres): add role creation case report` |
 
 ## 📍 Scenario
 Create a `reporting_user` role with read-only access to `users` table.
