@@ -67,6 +67,18 @@ services:
       role: gui
       engine: multi
 
+  monitor:
+    build: ./scripts/monitor
+    container_name: gptx_monitor
+    env_file:
+      - .env
+    ports:
+      - "9000:9000"
+    labels:
+      project: gptx-dba-practice
+      role: monitor
+      engine: multi
+
 volumes:
   pgdata:
     name: gptx_pgdata
