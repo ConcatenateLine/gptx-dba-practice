@@ -1,4 +1,4 @@
-Go to [`Track progress`](./track-progress.md).
+Go to [`Track progress`](../../../README.md).
 
 # 📚 CASE: Simulate Backup and Restore
 

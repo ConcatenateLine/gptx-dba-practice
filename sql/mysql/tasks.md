@@ -1,4 +1,4 @@
-Go to [`track-progress.md`](../../docs/track-progress.md) to see your progress.
+Go to [`track-progress.md`](../../README.md) to see your progress.
 
 # MySQL Practice Tasks
 

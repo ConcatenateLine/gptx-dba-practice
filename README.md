@@ -20,8 +20,8 @@ Each case corresponds to a documented solution for a task defined in `[module]/t
 
 | Task | Link to Task | Tags | Link to Case (activity) |
 |------|--------------|------|------|
-| Create a Developer Role | [task 1](./sql/mysql/tasks.md#1-create-a-developer-role) | access-control | ❌ pending |
-| Profile a Query | [task 2](./sql/mysql/tasks.md#2-profile-a-query) | performance | ❌ pending |
+| Create a Developer Role | [task 1](./sql/mysql/tasks.md#1-create-a-developer-role) | access-control | ✅ [case-[1].md](./sql/mysql/cases/case-[1].md) |
+| Profile a Query | [task 2](./sql/mysql/tasks.md#2-profile-a-query) | performance | ✅ [case-[2].md](./sql/mysql/cases/case-[2].md) |
 | Enable Slow Query Log | [task 3](./sql/mysql/tasks.md#3-enable-slow-query-log) | observability | ❌ pending |
 | Test Backup/Restore | [task 4](./sql/mysql/tasks.md#4-test-backuprestore) | recovery | ❌ pending |
 
