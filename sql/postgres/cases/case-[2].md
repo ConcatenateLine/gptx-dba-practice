@@ -3,7 +3,7 @@ Go to [`Track progress`](./../../../README.md).
 # 📚 CASE: Optimize a Query
 
 ```
-    Module: PostgreSQL    Date: 2025-10-01    Status: In Progress
+    Module: PostgreSQL    Date: 2025-10-01    Status: Completed
 ```
 
 ||||||

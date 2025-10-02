@@ -9,9 +9,9 @@ Each case corresponds to a documented solution for a task defined in `[module]/t
 
 | Task | Link to Task | Tags | Link to Case (activity) |
 |------|--------------|------|------|
-| Create a Role with Limited Access | [task 1](./sql/postgres/tasks.md#1-create-a-role-with-limited-access) | access-control |  [case-[1].md](./sql/postgres/cases/case-[1].md) |
-| Optimize a Query | [task 2](./sql/postgres/tasks.md#2-optimize-a-query) | performance, indexing |  [case-[2].md](./sql/postgres/cases/case-[2].md) |
-| Simulate Backup and Restore | [task 3](./sql/postgres/tasks.md#3-simulate-backup-and-restore) | recovery, integrity | ❌ pending |
+| Create a Role with Limited Access | [task 1](./sql/postgres/tasks.md#1-create-a-role-with-limited-access) | access-control | ✅  [case-[1].md](./sql/postgres/cases/case-[1].md) |
+| Optimize a Query | [task 2](./sql/postgres/tasks.md#2-optimize-a-query) | performance, indexing | ✅ [case-[2].md](./sql/postgres/cases/case-[2].md) |
+| Simulate Backup and Restore | [task 3](./sql/postgres/tasks.md#3-simulate-backup-and-restore) | recovery, integrity | ✅ [case-[3].md](./sql/postgres/cases/case-[3].md) |
 | Monitor Connections | [task 4](./sql/postgres/tasks.md#4-monitor-connections) | observability | ❌ pending |
 
 ---
