@@ -79,6 +79,27 @@ services:
       role: monitor
       engine: multi
 
+  mongo1_replset:
+    image: mongo:6
+    container_name: mongo1_replset
+    ports:
+      - "27018:27017"
+    command: mongod --replSet rs0 --bind_ip_all
+    
+  mongo2_replset:
+     image: mongo:6
+     container_name: mongo2_replset
+     ports:
+      - "27019:27017"
+     command: mongod --replSet rs0 --bind_ip_all
+    
+  mongo3_replset:
+    image: mongo:6
+    container_name: mongo3_replset
+    ports:
+      - "27020:27017"
+    command: mongod --replSet rs0 --bind_ip_all
+
 volumes:
   pgdata:
     name: gptx_pgdata
