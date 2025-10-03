@@ -43,7 +43,7 @@ Each case corresponds to a documented solution for a task defined in `[module]/t
 | Task | Link to Task | Tags |  Link to Case (activity) |
 |------|--------------|------|------|
 | Create a Replica Set | [task 1](./nosql/mongo/tasks.md#1-create-a-replica-set-local) | availability | ✅ [case-[1].md](./nosql/mongo/cases/case-[1].md) |
-| Model Nested Documents | [task 2](./nosql/mongo/tasks.md#2-model-nested-documents) | schema-design | ❌ pending |
+| Model Nested Documents | [task 2](./nosql/mongo/tasks.md#2-model-nested-documents) | schema-design | ✅ [case-[2].md](./nosql/mongo/cases/case-[2].md) |
 | Profile a Query | [task 3](./nosql/mongo/tasks.md#3-profile-a-query) | performance | ❌ pending |
 | Simulate Sharding | [task 4](./nosql/mongo/tasks.md#4-simulate-sharding-optional) | scalability | ❌ pending |
 
