@@ -1,0 +1,43 @@
+services:
+  mongo_config1:
+    image: mongo:6
+    container_name: mongo_config1
+    command: mongod --configsvr --replSet configReplSet --bind_ip_all --port 27017
+    ports: [ "27019:27017" ]
+
+  mongo_config2:
+    image: mongo:6
+    container_name: mongo_config2
+    command: mongod --configsvr --replSet configReplSet --bind_ip_all --port 27017
+    ports: [ "27020:27017" ]
+
+  mongo_shard1a:
+    image: mongo:6
+    container_name: mongo_shard1a
+    command: mongod --shardsvr --replSet shard1 --bind_ip_all --port 27017
+    ports: [ "27021:27017" ]
+
+  mongo_shard1b:
+    image: mongo:6
+    container_name: mongo_shard1b
+    command: mongod --shardsvr --replSet shard1 --bind_ip_all --port 27017
+    ports: [ "27022:27017" ]
+
+  mongo_shard2a:
+    image: mongo:6
+    container_name: mongo_shard2a
+    command: mongod --shardsvr --replSet shard2 --bind_ip_all --port 27017
+    ports: [ "27023:27017" ]
+
+  mongo_shard2b:
+    image: mongo:6
+    container_name: mongo_shard2b
+    command: mongod --shardsvr --replSet shard2 --bind_ip_all --port 27017
+    ports: [ "27024:27017" ]
+
+  mongo_mongos:
+    image: mongo:6
+    container_name: mongo_mongos
+    depends_on: [ mongo_config1, mongo_config2 ]
+    command: mongos --configdb configReplSet/mongo_config1:27017,mongo_config2:27017 --bind_ip_all --port 27017
+    ports: [ "27017:27017" ]
