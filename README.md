@@ -33,7 +33,7 @@ Each case corresponds to a documented solution for a task defined in `[module]/t
 |------|--------------|------|------|
 | Simulate Login Cache | [task 1](./nosql/redis/tasks.md#1-simulate-login-cache) | caching, expiration | ✅ [case-[1].md](./nosql/redis/cases/case-[1].md) |
 | Use Hashes for Product Info | [task 2](./nosql/redis/tasks.md#2-use-hashes-for-product-info) | data-modeling | ✅ [case-[2].md](./nosql/redis/cases/case-[2].md) |
-| Monitor Keyspace | [task 3](./nosql/redis/tasks.md#3-monitor-keyspace) | observability | ❌ pending |
+| Monitor Keyspace | [task 3](./nosql/redis/tasks.md#3-monitor-keyspace) | observability | ✅ [case-[3].md](./nosql/redis/cases/case-[3].md) |
 | Automate Cleanup | [task 4](./nosql/redis/tasks.md#4-automate-cleanup) | scripting | ❌ pending |
 
 ---
